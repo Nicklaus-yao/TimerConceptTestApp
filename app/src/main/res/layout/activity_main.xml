@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                tools:context="com.nykidxxx.timerconcepttestapp.MainActivity">
+
+    <TextView
+        android:id="@+id/timerValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="left|center_vertical"
+        android:text="0:00"
+        android:textSize="30sp"/>
+
+    <!-- Population Management -->
+    <TextView
+        android:id="@+id/populationLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:gravity="left|center_vertical"
+        android:text="Population: "
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/populationValue"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignTop="@id/populationLabel"
+        android:layout_toEndOf="@+id/populationLabel"
+        android:gravity="left|center_vertical"
+        android:text="0"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/unassignedValue"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/populationValue"
+        android:gravity="left|center_vertical"
+        android:text="0"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/unassignedLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/unassignedValue"
+        android:layout_toStartOf="@+id/unassignedValue"
+        android:gravity="left|center_vertical"
+        android:text="Unemployed: "
+        android:textSize="18sp"/>
+
+    <!-- 1. Food -->
+    <TextView
+        android:id="@+id/foodLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/populationLabel"
+        android:layout_marginTop="30dp"
+        android:gravity="left|center_vertical"
+        android:text="Food: "
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/foodValue"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignTop="@id/foodLabel"
+        android:layout_toEndOf="@id/foodLabel"
+        android:gravity="left|center_vertical"
+        android:text="0"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/incFoodButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/foodValue"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/foodValue"
+        android:background="#FFFFFF"
+        android:gravity="left|center_vertical"
+        android:text="+1"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/foodLaborLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignTop="@id/foodLabel"
+        android:layout_marginStart="40dp"
+        android:layout_toEndOf="@id/incFoodButton"
+        android:gravity="left|center_vertical"
+        android:text="Farmers: "
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/foodLaborValue"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignTop="@id/foodLaborLabel"
+        android:layout_toEndOf="@id/foodLaborLabel"
+        android:gravity="left|center_vertical"
+        android:text="0"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/incFoodLaborButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/foodLaborValue"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/foodLaborValue"
+        android:background="#ffffff"
+        android:gravity="left|center_vertical"
+        android:text="+1"
+        android:textSize="18sp"/>
+
+    <!-- 2. Water -->
+    <TextView
+        android:id="@+id/waterLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/incFoodButton"
+        android:layout_marginTop="30dp"
+        android:gravity="left|center_vertical"
+        android:text="Water: "
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/waterValue"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/waterLabel"
+        android:layout_toEndOf="@+id/waterLabel"
+        android:gravity="left|center_vertical"
+        android:text="0"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/incWaterButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@id/waterValue"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/waterValue"
+        android:background="#ffffff"
+        android:gravity="left|center_vertical"
+        android:text="+1"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/waterLaborLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignStart="@id/foodLaborLabel"
+        android:layout_alignTop="@id/waterLabel"
+        android:gravity="left|center_vertical"
+        android:text="Waterbearers: "
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/waterLaborValue"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignTop="@id/waterLaborLabel"
+        android:layout_toEndOf="@id/waterLaborLabel"
+        android:gravity="left|center_vertical"
+        android:text="0"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/incWaterLaborButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@id/waterLaborValue"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/waterLaborValue"
+        android:background="#ffffff"
+        android:gravity="left|center_vertical"
+        android:text="+1"
+        android:textSize="18sp"/>
+
+    <!-- 3. Wood -->
+    <TextView
+        android:id="@+id/woodLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/incWaterLaborButton"
+        android:layout_marginTop="30dp"
+        android:gravity="left|center_vertical"
+        android:text="Wood: "
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/woodValue"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/woodLabel"
+        android:layout_toEndOf="@+id/woodLabel"
+        android:gravity="left|center_vertical"
+        android:text="0"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/incWoodButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@id/woodValue"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/woodValue"
+        android:background="#ffffff"
+        android:gravity="left|center_vertical"
+        android:text="+1"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/woodLaborLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignStart="@id/foodLaborLabel"
+        android:layout_alignTop="@id/woodLabel"
+        android:gravity="left|center_vertical"
+        android:text="Woodcutters: "
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/woodLaborValue"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignTop="@id/woodLaborLabel"
+        android:layout_toEndOf="@id/woodLaborLabel"
+        android:gravity="left|center_vertical"
+        android:text="0"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/incWoodLaborButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@id/woodLaborValue"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/woodLaborValue"
+        android:background="#ffffff"
+        android:gravity="left|center_vertical"
+        android:text="+1"
+        android:textSize="18sp"/>
+
+    <!-- 4. Stone -->
+    <TextView
+        android:id="@+id/stoneLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/incWoodButton"
+        android:layout_marginTop="30dp"
+        android:gravity="left|center_vertical"
+        android:text="Stone: "
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/stoneValue"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/stoneLabel"
+        android:layout_toEndOf="@+id/stoneLabel"
+        android:gravity="left|center_vertical"
+        android:text="0"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/incStoneButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@id/stoneValue"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/stoneValue"
+        android:background="#ffffff"
+        android:gravity="left|center_vertical"
+        android:text="+1"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/stoneLaborLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignStart="@id/foodLaborLabel"
+        android:layout_alignTop="@id/stoneLabel"
+        android:gravity="left|center_vertical"
+        android:text="Stonemasons: "
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/stoneLaborValue"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignTop="@id/stoneLaborLabel"
+        android:layout_toEndOf="@id/stoneLaborLabel"
+        android:gravity="left|center_vertical"
+        android:text="0"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/incStoneLaborButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@id/stoneLaborValue"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/stoneLaborValue"
+        android:background="#ffffff"
+        android:gravity="left|center_vertical"
+        android:text="+1"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/stoneLabel"
+        android:layout_marginTop="60dp"
+        android:text="Build Hut"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView4"
+        android:text="Wood"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView4"
+        android:layout_toEndOf="@+id/foodLabel"
+        android:text="250"/>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:text="Increases Population by 1 every 60s"/>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView4"
+        android:layout_alignStart="@+id/incWaterButton"
+        android:text="0"
+        android:textSize="18sp"/>
+
+</RelativeLayout>
